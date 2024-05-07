@@ -33,7 +33,7 @@ function update_all {
   distrobox upgrade --all
   if [[ "$1" == "s" ]]; then
     sudo shutdown now
-  elif [[ $"1" == "r" ]]; then
+  elif [[ "$1" == "r" ]]; then
     sudo reboot
   fi
   kill $pid 
