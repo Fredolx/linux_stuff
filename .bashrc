@@ -13,7 +13,7 @@
 test -s ~/.alias && . ~/.alias || true
 
 function ocr {
-  wl-paste | tesseract - stdout
+  wl-paste | tesseract - stdout 2>/dev/null | cat
 }
 
 function reset_gpu_cache {
