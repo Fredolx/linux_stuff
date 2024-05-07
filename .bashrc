@@ -12,6 +12,14 @@
 
 test -s ~/.alias && . ~/.alias || true
 
+function ocr {
+  wl-paste | tesseract - stdout
+}
+
+function reset_gpu_cache {
+  rm -rf ~/.config/Code/GPUCache
+}
+
 function sudo_keep_alive {
   sudo -v
   while true; do sudo -n true; sleep 10; done 2>/dev/null &
