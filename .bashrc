@@ -29,6 +29,7 @@ function update_all {
   echo $pid
   sudo zypper dup --no-recommends -y
   flatpak upgrade -y
+  flatpak uninstall --unused --delete-data
   rustup update
   distrobox upgrade --all
   if [[ "$1" == "s" ]]; then
